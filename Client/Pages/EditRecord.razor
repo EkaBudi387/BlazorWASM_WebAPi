@@ -1,4 +1,4 @@
-﻿@page "/editRecord"
+﻿@page "/editRecord/{No}"
 
 @using BlazorWASM_WebAPi.Shared
 
@@ -51,12 +51,12 @@
     protected async Task UpdateRecord()
     {
         await Http.PutAsJsonAsync("api/RecordDetails/" + No, record);
-        NavigationManager.NavigateTo("recordList");
+        NavigationManager.NavigateTo("listRecord");
 
     }
     void Cancel()
     {
-        NavigationManager.NavigateTo("recordList");
+        NavigationManager.NavigateTo("listRecord");
 
     }
 

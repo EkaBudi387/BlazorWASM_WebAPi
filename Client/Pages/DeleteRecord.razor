@@ -47,12 +47,12 @@
     protected async Task Delete()
     {
         await Http.DeleteAsync("api/DetailRecords/" + No);
-        NavigationManager.NavigateTo("recordList");
+        NavigationManager.NavigateTo("listRecord");
 
     }
     void Cancel()
     {
-        NavigationManager.NavigateTo("recordList");
+        NavigationManager.NavigateTo("listRecord");
 
     }
 
